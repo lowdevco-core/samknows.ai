@@ -10,6 +10,20 @@ const GUIDES = [
     meta: "November 10, 2026 · 7 min read",
   },
   {
+    to: "/claude-seo-skill",
+    tag: "AI",
+    title: "Claude SEO Skill: Run a Full Website Audit Inside Claude (2026)",
+    dek: "A free Claude Code skill for SEO audits, technical SEO and AI search optimisation. One /seo command gives you a prioritised roadmap of what to fix.",
+    meta: "November 9, 2026 · 5 min read",
+  },
+  {
+    to: "/claude-video-effects-skill",
+    tag: "AI",
+    title: "51 Video Effects for Claude: Install the /effects Skill Free (2026)",
+    dek: "A free Claude Code skill that adds 51 visual effects to your talking-head videos, with your original audio kept.",
+    meta: "November 8, 2026 · 6 min read",
+  },
+  {
     to: "/claude-day-trader-skill-setup-guide",
     tag: "AI",
     title: "Claude Day Trader Skill Setup Guide: Install All 11 Skills Free (2026)",
