@@ -2,8 +2,6 @@
  * samknows.ai — page behaviour: reading progress, contents scrollspy, code copy.
  * Vanilla JS, progressive enhancement only.
  */
-(function () {
-	'use strict';
 
 	var ROOT_SELECTOR = '.gz-single';
 	var WPM = 220;
@@ -18,10 +16,6 @@
 
 	function $$(sel, ctx) {
 		return Array.prototype.slice.call((ctx || document).querySelectorAll(sel));
-	}
-
-	function prefersReducedMotion() {
-		return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 	}
 
 	/* ------------------------------------------------------------------
@@ -333,7 +327,7 @@
 
 		window.requestAnimationFrame(function () {
 			target.scrollIntoView({
-				behavior: prefersReducedMotion() ? 'auto' : 'smooth',
+				behavior: 'instant', // a long smooth scroll on page load gets interrupted before it arrives
 				block: 'start'
 			});
 		});
@@ -355,14 +349,9 @@
 		initCopy();
 	}
 
-	if (document.readyState === 'loading') {
-		document.addEventListener('DOMContentLoaded', function () {
-			init();
-			initHashOffset();
-		});
-	} else {
+	// Called by the page component after its markup mounts.
+	// shortcut: scroll listeners from earlier visits stay bound to detached nodes (harmless no-ops); add cleanup if pages multiply.
+	export default function initPage() {
 		init();
 		initHashOffset();
 	}
-
-})();
