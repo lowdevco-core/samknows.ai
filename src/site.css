@@ -338,3 +338,31 @@ h2:hover .gz-anchor, h3:hover .gz-anchor { opacity: 1; }
 .gz-cta p { margin: 0; }
 .gz-cta .gz-btn--primary { border-color: var(--ink); }
 .gz-cta .gz-btn--primary:hover { background: var(--ink); border-color: var(--ink); color: var(--yellow); }
+
+/* Certificate cards (CertificatesGuide.jsx) */
+.gz-cert {
+  margin: 28px 0;
+  padding: 22px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.gz-cert__head { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+.gz-cert__logo {
+  flex: none;
+  width: 48px; height: 48px;
+  padding: 6px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  object-fit: contain;
+}
+.gz-article .gz-cert h2 { margin: 0; font-size: 22px; }
+.gz-article .gz-cert h2::after { display: none; }
+.gz-cert__topics { margin: 4px 0 0 !important; font: 500 13px/1.4 var(--mono); color: var(--ink-2); }
+.gz-cert .gz-btn--primary { border-color: var(--ink); }
+.gz-cert .gz-btn--primary:hover { background: var(--ink); border-color: var(--ink); color: var(--yellow); }
+@media (max-width: 560px) {
+  .gz-cert { padding: 16px; }
+  .gz-article .gz-cert h2 { font-size: 19px; }
+}
