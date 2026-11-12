@@ -75,14 +75,16 @@ const SKILLS = [
 ];
 
 const CAFE = [
-  ["Money left from each cup after its own costs", "$4.76"],
-  ["Cups a day needed to break even", "186"],
-  ["Planned cups a day", "383"],
-  ["Profit margin at 383 cups a day", "38%"],
-  ["Year 1 profit from operations (after a slow start)", "$93,926"],
-  ["Startup spend", "$25,280"],
+  ["Price of one iced matcha latte", "₹280"],
+  ["Money left from each cup after its own costs (matcha, milk, cup, ice)", "₹200"],
+  ["Fixed costs a month (rent, 3 staff, power, billing software)", "₹4.5 lakh"],
+  ["Cups a day needed to break even", "75"],
+  ["Planned cups a day", "150"],
+  ["Profit margin at 150 cups a day", "36%"],
+  ["Year 1 profit from operations (after a slow start)", "₹30 lakh"],
+  ["Startup spend (fit-out, machines, deposit)", "₹12 lakh"],
   ["When the startup spend is earned back", "Month 8"],
-  ["Cash the founder needs before it pays for itself", "$34,092"],
+  ["Cash the founder needs before it pays for itself", "₹16 lakh"],
 ];
 
 const TOOLS = [
@@ -113,7 +115,7 @@ export default function FounderSkillGuide() {
       </p>
       <p>
         The idea is simple. Find out how to launch, how to market and whether
-        you’ll actually make money now, instead of spending thousands to learn
+        you’ll actually make money now, instead of spending lakhs to learn
         it the hard way. It’s made by Jake Schincariol (who also made the Day
         Trader skill). Below I explain what each part does and how to use it.
       </p>
@@ -232,10 +234,10 @@ cp -r founder-skill/skills/founder-* ~/.claude/skills/`}</Code>
       </p>
       <Code>{`board -> competitors -> consumer -> pricing -> offer -> cfo -> marketing -> brand -> ops -> launch -> plan`}</Code>
       <p>
-        The repo comes with a worked example you can follow: a matcha café in
-        Toronto selling iced matcha lattes at $6.50 a cup. All its inputs are
-        included, so you can run the tools on it yourself. Here’s what happens
-        at each step:
+        The repo comes with a worked example: a matcha café selling iced
+        matcha lattes. The original is set in Toronto in dollars, so I’ve
+        moved it to Bengaluru with Indian prices: ₹280 a cup, about what a
+        good café there charges. Here’s what happens at each step:
       </p>
       <ol>
         <li>
@@ -255,12 +257,12 @@ cp -r founder-skill/skills/founder-* ~/.claude/skills/`}</Code>
           customer (city professionals aged 24 to 38 who buy coffee most days),
           creates 100 different buyers from that, and asks each one. You get
           back who buys, who passes, their reasons in their own words (“my
-          coffee place is closer”, “$6.50 is steep for a drink”), and what
+          coffee place is closer”, “₹280 is too much for a drink”), and what
           would change a no into a yes.
         </li>
         <li>
           <strong>{c("founder-pricing")}</strong> uses four price answers from
-          each buyer to find the range people accept, then checks $6.50
+          each buyer to find the range people accept, then checks ₹280
           against it and against the competitors.
         </li>
         <li>
@@ -295,15 +297,16 @@ cp -r founder-skill/skills/founder-* ~/.claude/skills/`}</Code>
 
       <H id="numbers">What did the CFO find for the café?</H>
       <p>
-        These are the numbers <code>/founder-cfo</code> gives for the matcha
-        café example:
+        Here’s the kind of report <code>/founder-cfo</code> gives. These are
+        my estimates for a small Bengaluru café, not the repo’s exact output,
+        so swap in your own rent and costs:
       </p>
       <Table head={["What it measures", "Result"]} rows={CAFE} />
       <p>
-        In plain words: the café loses money below 186 cups a day and makes
-        money above it. The plan aims for 383, about double. The founder needs
-        around $34,000 in the bank to survive until the café pays for itself,
-        which is more than the $25,280 setup cost because the first months are
+        In plain words: the café loses money below 75 cups a day and makes
+        money above it. The plan aims for 150, double that. The founder needs
+        around ₹16 lakh in the bank to survive until the café pays for itself,
+        which is more than the ₹12 lakh setup cost because the first months are
         slow.
       </p>
 
@@ -330,7 +333,7 @@ cp -r founder-skill/skills/founder-* ~/.claude/skills/`}</Code>
       </p>
       <Code>{`python3 skills/founder-cfo/unit_economics.py founder/numbers.json --out founder/cfo.md
 python3 skills/founder-consumer/panel.py init --customer founder/customer.json --pitch founder/pitch.md
-python3 skills/founder-pricing/van_westendorp.py founder/panel/answers --price 6.50
+python3 skills/founder-pricing/van_westendorp.py founder/panel/answers --price 280
 python3 skills/founder-plan/compile.py --dir founder`}</Code>
       <Table head={["Tool", "Used by", "What it does"]} rows={TOOLS} />
       <p>
@@ -411,8 +414,8 @@ python3 skills/founder-plan/compile.py --dir founder`}</Code>
           <a href={REPO} target="_blank" rel="noopener">
             The Founder skill (README)
           </a>
-          , GitHub, retrieved 2026-11-12. All figures for the matcha café
-          example and the install steps come from this repository.
+          , GitHub, retrieved 2026-11-12. The install steps come from this repository. The rupee café figures are
+          my own estimates for India.
         </small>
       </p>
       <div className="gz-box gz-cta">
