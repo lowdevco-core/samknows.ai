@@ -26,7 +26,6 @@ const toc = [
   { id: "flow", title: "How do you run one trade, start to finish?" },
   { id: "safety", title: "How does it keep your money safe?" },
   { id: "limits", title: "What can the Day Trader skill not do?" },
-  { id: "build", title: "Want skills like this built for your business?" },
   { id: "faq", title: "FAQ" },
   {
     id: "is-the-day-trader-skill-really-free",
@@ -646,20 +645,6 @@ Copy-Item -Recurse day-trader-skill\\trader-* "$env:USERPROFILE\\.claude\\skills
         ). If you’re in India, check the rules for your broker and market first.
         This tool reads US data.
       </p>
-      <h2 id="build">
-        Want skills like this built for your business?
-        <a href="#build" className="gz-anchor" aria-hidden="true" tabIndex={-1}>
-          ★
-        </a>
-      </h2>
-      <p>
-        Skill packs like this one are a good model for how AI should work: one
-        clear job per skill, with a human saying yes. That’s how I build
-        marketing workflows too. I’m an AI-native digital marketer, and I set up
-        the SEO content pipelines, ad reporting and Instagram automations I
-        recommend. See my AI-powered digital marketing services or browse the
-        projects I’ve built.
-      </p>
       <h2 id="faq">
         FAQ
         <a href="#faq" className="gz-anchor" aria-hidden="true" tabIndex={-1}>
@@ -781,10 +766,8 @@ Copy-Item -Recurse day-trader-skill\\trader-* "$env:USERPROFILE\\.claude\\skills
               samknows.ai
             </a>
           </strong>
-          , an AI-native digital marketer and SEO executive in Kochi, Kerala. I
-          run SEO, social and paid ads for brands in India and the UAE, and I
-          teach AI workflows to students and teams. I’m not a financial adviser,
-          and this post is a software setup guide, not trading advice.{" "}
+. I’m not a financial adviser, and this post is a software setup
+          guide, not trading advice.{" "}
           <a
             href="https://www.instagram.com/samknows.ai/"
             target="_blank"

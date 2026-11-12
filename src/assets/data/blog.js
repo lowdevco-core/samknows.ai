@@ -1,3 +1,4 @@
+import FounderSkillGuide from "../../pages/FounderSkillGuide.jsx";
 import CertificatesGuide from "../../pages/CertificatesGuide.jsx";
 import MarkItDownGuide from "../../pages/MarkItDownGuide.jsx";
 import ClaudeSeoGuide from "../../pages/ClaudeSeoGuide.jsx";
@@ -6,6 +7,15 @@ import DayTraderGuide from "../../pages/DayTraderGuide.jsx";
 
 // Every guide on the site, newest first. Adding one here creates its route (App.jsx) and its homepage card.
 export const GUIDES = [
+  {
+    path: "/claude-founder-skill",
+    Page: FounderSkillGuide,
+    tag: "AI",
+    title:
+      "Founder Skill Guide: Test Your Business Idea with 11 Free Claude Skills (2026)",
+    dek: "A board of directors, a CFO and a 100-buyer consumer panel inside Claude. Install the free Founder skill pack and test your idea before you launch.",
+    meta: "November 12, 2026 · 9 min read",
+  },
   {
     path: "/free-ai-certificates",
     Page: CertificatesGuide,
