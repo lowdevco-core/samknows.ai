@@ -1,3 +1,4 @@
+import ClipForgeGuide from "../../pages/ClipForgeGuide.jsx";
 import FounderSkillGuide from "../../pages/FounderSkillGuide.jsx";
 import CertificatesGuide from "../../pages/CertificatesGuide.jsx";
 import MarkItDownGuide from "../../pages/MarkItDownGuide.jsx";
@@ -7,6 +8,15 @@ import DayTraderGuide from "../../pages/DayTraderGuide.jsx";
 
 // Every guide on the site, newest first. Adding one here creates its route (App.jsx) and its homepage card.
 export const GUIDES = [
+  {
+    path: "/claude-clip-forge-skill",
+    Page: ClipForgeGuide,
+    tag: "AI",
+    title:
+      "ClipForge Guide: Turn Any YouTube Video into Edited Shorts with Claude (2026)",
+    dek: "Paste a link, pick your favourite moments, get vertical clips that look edited. Install the free ClipForge skill for Shorts, Reels and TikTok.",
+    meta: "November 13, 2026 · 8 min read",
+  },
   {
     path: "/claude-founder-skill",
     Page: FounderSkillGuide,
