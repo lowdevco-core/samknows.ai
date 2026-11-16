@@ -1,3 +1,4 @@
+import WifiFixGuide from "../../pages/WifiFixGuide.jsx";
 import ClipForgeGuide from "../../pages/ClipForgeGuide.jsx";
 import FounderSkillGuide from "../../pages/FounderSkillGuide.jsx";
 import CertificatesGuide from "../../pages/CertificatesGuide.jsx";
@@ -8,6 +9,14 @@ import DayTraderGuide from "../../pages/DayTraderGuide.jsx";
 
 // Every guide on the site, newest first. Adding one here creates its route (App.jsx) and its homepage card.
 export const GUIDES = [
+  {
+    path: "/claude-wifi-fix-prompt",
+    Page: WifiFixGuide,
+    tag: "AI",
+    title: "Slow WiFi? One Claude Prompt That Finds Why and Fixes It (2026)",
+    dek: "Copy one prompt into Claude: it tests your speed, checks your computer, router, signal and neighbours, then fixes what it finds after you say yes.",
+    meta: "November 16, 2026 · 6 min read",
+  },
   {
     path: "/claude-clip-forge-skill",
     Page: ClipForgeGuide,
