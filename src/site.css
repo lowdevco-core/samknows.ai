@@ -858,3 +858,42 @@ h3:hover .gz-anchor {
 .gz-photos figcaption span {
   color: var(--ink-2);
 }
+
+/* Logo figure and download cards (OpenJarvisGuide) */
+.gz-logo img {
+  padding: 24px;
+  background: var(--paper);
+  object-fit: contain;
+}
+.gz-downloads {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+.gz-downloads a {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: border-color 0.15s, transform 0.15s;
+}
+.gz-downloads a:hover,
+.gz-downloads a:focus-visible {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+.gz-downloads span {
+  font-size: 14px;
+  color: var(--ink-2);
+}
+.gz-article .gz-downloads code {
+  align-self: flex-start;
+  font-size: 12px;
+  word-break: break-all;
+}

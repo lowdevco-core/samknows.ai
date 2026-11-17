@@ -1,3 +1,4 @@
+import OpenJarvisGuide from "../../pages/OpenJarvisGuide.jsx";
 import WifiFixGuide from "../../pages/WifiFixGuide.jsx";
 import ClipForgeGuide from "../../pages/ClipForgeGuide.jsx";
 import FounderSkillGuide from "../../pages/FounderSkillGuide.jsx";
@@ -9,6 +10,15 @@ import DayTraderGuide from "../../pages/DayTraderGuide.jsx";
 
 // Every guide on the site, newest first. Adding one here creates its route (App.jsx) and its homepage card.
 export const GUIDES = [
+  {
+    path: "/openjarvis-guide",
+    Page: OpenJarvisGuide,
+    tag: "AI",
+    title:
+      "OpenJarvis Guide: Run Your Own Private AI Assistant on Your Computer (2026)",
+    dek: "Stanford's free, open-source assistant that runs AI on your own machine. Install it with one Claude prompt or a desktop download, then put it to work.",
+    meta: "November 17, 2026 · 10 min read",
+  },
   {
     path: "/claude-wifi-fix-prompt",
     Page: WifiFixGuide,
